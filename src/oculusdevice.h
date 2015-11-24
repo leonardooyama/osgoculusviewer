@@ -16,7 +16,7 @@
 #include <osg/Version>
 #include <osg/FrameBufferObject>
 
-#if(OSG_VERSION_GREATER_OR_EQUAL(3, 4, 0))
+#if(OSG_VERSION_GREATER_OR_EQUAL(3, 3, 6))
 	typedef osg::GLExtensions OSG_GLExtensions;
 	typedef osg::GLExtensions OSG_Texture_Extensions;
 #else
@@ -116,8 +116,8 @@ class OculusDevice : public osg::Referenced
 public:
 	typedef enum Eye_
 	{
-		LEFT = 0,
-		RIGHT = 1,
+		LEFT_EYE = 0,
+		RIGHT_EYE = 1,
 		COUNT = 2
 	} Eye;
 	OculusDevice(float nearClip, float farClip, const float pixelsPerDisplayPixel = 1.0f, const float worldUnitsPerMetre = 1.0f, const int samples = 0);

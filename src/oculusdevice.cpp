@@ -24,7 +24,7 @@
 
 static const OSG_GLExtensions* getGLExtensions(const osg::State& state)
 {
-#if(OSG_VERSION_GREATER_OR_EQUAL(3, 4, 0))
+#if(OSG_VERSION_GREATER_OR_EQUAL(3, 3, 6))
 	return state.get<osg::GLExtensions>();
 #else
 	return osg::FBOExtensions::instance(state.getContextID(), true);
@@ -33,7 +33,7 @@ static const OSG_GLExtensions* getGLExtensions(const osg::State& state)
 
 static const OSG_Texture_Extensions* getTextureExtensions(const osg::State& state)
 {
-#if(OSG_VERSION_GREATER_OR_EQUAL(3, 4, 0))
+#if(OSG_VERSION_GREATER_OR_EQUAL(3, 3, 6))
 	return state.get<osg::GLExtensions>();
 #else
 	return osg::Texture::getExtensions(state.getContextID(), true);
